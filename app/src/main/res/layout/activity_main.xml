@@ -1,18 +1,109 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/background"
+    >
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/Title"
+        android:layout_marginTop="30dp"
+        android:text="Some text"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"/>
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#fff"/>
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginTop="80dp"
+        android:layout_gravity="center_horizontal"
+        android:src="@drawable/headphones" />
+
+    <SeekBar
+        android:id="@+id/progressBarr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:progressTint="#fff"
+        android:thumbTint="#fff"
+        android:backgroundTint="#fff"
+        tools:targetApi="lollipop"
+        android:progress="40"/>
+
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp">
+
+        <TextView
+            android:id="@+id/timeEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="00:00"
+            android:textSize="20sp"
+            android:layout_alignParentEnd="true" />
+        <TextView
+            android:id="@+id/timeStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#fff"
+            android:text="00:00"
+            android:textSize="20sp"
+            android:layout_alignParentStart="true" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/playAndStopButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textSize="24sp"
+        android:shadowColor="@color/black"
+        android:backgroundTint="@color/teal_200"
+        android:textAllCaps="true"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Volume"
+        android:textSize="24sp"
+        android:textColor="#fff"
+        android:layout_marginStart="30dp"/>
+
+    <SeekBar
+        android:id="@+id/volumeBarr"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:progressTint="#fff"
+        android:thumbTint="#fff"
+        android:backgroundTint="#fff"
+        tools:targetApi="lollipop"
+        android:progress="40"/>
+
+
+
+
+</LinearLayout>
